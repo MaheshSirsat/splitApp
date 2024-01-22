@@ -1,0 +1,46 @@
+<mvc:View
+	controllerName="splitapp.controller.Detaildetail"
+	xmlns:mvc="sap.ui.core.mvc"
+    	xmlns:sf="sap.ui.comp.smartfield"
+	xmlns="sap.m"
+    	xmlns:form="sap.ui.comp.smartform"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+<Page id="page" showNavButton="true" navButtonPress="navBack" title="{CategoryName}">
+        <content>
+       <form:SmartForm id="SF1" class="editableForm" editTogglable="true" editable="false" title="Product Detail" >
+			<form:Group id="G1" label="Category">
+
+				<!-- ********************************** -->
+				<!-- sap:updatable="false"				-->
+				<!-- ********************************** -->
+				
+				<form:GroupElement >
+
+					<sf:SmartField textLabel="Category Name" value="{CategoryName}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="Category ID" value="{CategoryID}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="Description" value="{Description}"/>
+
+				</form:GroupElement>
+                
+
+         
+				
+			</form:Group>
+		</form:SmartForm>
+        
+        </content> 
+        </Page>
+</mvc:View>

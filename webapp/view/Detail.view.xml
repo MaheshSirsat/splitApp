@@ -1,0 +1,117 @@
+<mvc:View
+	controllerName="splitapp.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+    	xmlns:sf="sap.ui.comp.smartfield"
+	xmlns="sap.m"
+    	xmlns:form="sap.ui.comp.smartform"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+  <Page id="page" title="{ProductName}">
+        <content>
+        	<IconTabBar
+		id="idIconTabBarMulti"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter icon="sap-icon://hint" key="info" iconColor="Positive">
+			<content>
+            
+            <form:SmartForm id="SF1" class="editableForm" editTogglable="true" editable="false" title="Product Detail" >
+			<form:Group id="G1" label="Product">
+
+				<!-- ********************************** -->
+				<!-- sap:updatable="false"				-->
+				<!-- ********************************** -->
+				<form:GroupElement >
+
+					<sf:SmartField textLabel="Product Name" value="{ProductName}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="Supplier ID" value="{SupplierID}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="CategoryID" value="{CategoryID}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="QuantityPerUnit" value="{QuantityPerUnit}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="UnitPrice" value="{UnitPrice}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="UnitsInStock" value="{UnitsInStock}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="UnitsOnOrder" value="{UnitsOnOrder}"/>
+
+				</form:GroupElement>
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="ReorderLevel" value="{ReorderLevel}"/>
+
+				</form:GroupElement>
+
+                <form:GroupElement >
+
+					<sf:SmartField textLabel="Discontinued" value="{Discontinued}"/>
+
+				</form:GroupElement>
+				
+			</form:Group>
+		</form:SmartForm>
+            </content>
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://attachment"
+				key="attachments"
+                iconColor="Negative"
+				count="3">
+				<content>
+
+                	<List
+		headerText="Navigate to..."
+		headerLevel="H2"
+        mode="SingleSelectMaster"
+		
+        selectionChange="listChange"
+		 >
+		<StandardListItem
+
+			title="Category"
+            
+			/>
+         
+	</List>
+
+                </content>
+
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://notes"
+				key="notes"
+                iconColor="Critical"
+				count="12">
+				<Text text="Notes go here ..." />
+			</IconTabFilter>
+	
+		</items>
+	</IconTabBar>
+        </content>
+    </Page>
+</mvc:View>
