@@ -17,9 +17,7 @@ sap.ui.define([
             this.getView().bindElement("/Products("+id+")")
           
         },
-        mygirl(){
-            debugger
-        },
+       
         listChange(oEvent){
             var oList = oEvent.getParameter("listItem")
             var select = oEvent.getParameter("listItem").getBindingContextPath()
